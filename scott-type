@@ -1,1 +1,7 @@
-print('{"name": "dummy"}')
+import json
+
+data = {}
+data['name'] = 'scott'
+json_data = json.dumps(data)
+
+print(json_data)
