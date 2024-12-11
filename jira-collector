@@ -1,7 +1,7 @@
 import json
 
 data = {}
-data['name'] = 'scott'
+data['name'] = 'jira-collector'
 data['issues'] = [ "SCOTT-1", "SCOTT-2" ]
 json_data = json.dumps(data)
 
