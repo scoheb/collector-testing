@@ -2,6 +2,7 @@ import json
 
 data = {}
 data['name'] = 'scott'
+data['issues'] = [ "SCOTT-1", "SCOTT-2" ]
 json_data = json.dumps(data)
 
 print(json_data)
