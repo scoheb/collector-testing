@@ -7,7 +7,6 @@ data['issues'] = [ "SCOTT-1", "SCOTT-2" ]
 json_data = json.dumps(data)
 
 subprocess.run(["ls", "-lR", "/tekton/creds-secrets"])
-subprocess.run(["ls", "-lR", "/home/tekton"])
-subprocess.run(["ls", "-lR", "$HOME"])
+subprocess.run(["ls", "-lR", "/tekton/home"])
 
 print(json_data)
