@@ -1,11 +1,15 @@
 import json
 import subprocess
+import sys
+
+print('Number of arguments: {}'.format(len(sys.argv)))
+print('Argument(s) passed: {}'.format(str(sys.argv)))
 
 data = {}
 data['name'] = 'jira-collector'
 data['issues'] = [ "SCOTT-1", "SCOTT-2" ]
 json_data = json.dumps(data)
 
-subprocess.run(["ls", "-lFaR", "/var/run/secrets"])
+subprocess.run(["ls", "-lFaR", "/etc/collectors-secrets"])
 
 print(json_data)
