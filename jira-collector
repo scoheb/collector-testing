@@ -1,8 +1,11 @@
 import json
+import subprocess
 
 data = {}
 data['name'] = 'jira-collector'
 data['issues'] = [ "SCOTT-1", "SCOTT-2" ]
 json_data = json.dumps(data)
+
+subprocess.run(["ls", "-lR", "/tekton/creds"])
 
 print(json_data)
