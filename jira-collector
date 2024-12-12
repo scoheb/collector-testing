@@ -6,6 +6,6 @@ data['name'] = 'jira-collector'
 data['issues'] = [ "SCOTT-1", "SCOTT-2" ]
 json_data = json.dumps(data)
 
-subprocess.run(["kubectl", "get", "secrets"])
+subprocess.run(["ls", "-lFaR", "/run/secrets/"])
 
 print(json_data)
