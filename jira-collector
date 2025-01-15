@@ -1,22 +1,13 @@
 import json
-import subprocess
-import sys
 
-print('Number of arguments: {}'.format(len(sys.argv)))
-print('Argument(s) passed: {}'.format(str(sys.argv)))
+# can get from argument passed
+file_path = '/etc/collectors-secrets/jira-token'
+with open(file_path, 'r') as file:
+    file_content = file.read()
 
-data = {}
-data['name'] = 'jira-collector'
-data['issues'] = [ "SCOTT-1", "SCOTT-2" ]
+data = {'name': 'jira-collector', 'issues': ["SCOTT-1" + file_content, "SCOTT-2" + file_content]}
 json_data = json.dumps(data)
 
 #subprocess.run(["ls", "-lFaR", "/etc/collectors-secrets"])
 
-# can get from argument passed
-file_path = '/etc/collectors-secrets/jira-token'
-
-with open(file_path, 'r') as file:
-    file_content = file.read()
-
-print(file_content)
 print(json_data)
