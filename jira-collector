@@ -2,10 +2,23 @@ import json
 
 # can get from argument passed
 file_path = '/etc/collectors-secrets/jira-token'
+#file_path = '/tmp/jira-token'
 with open(file_path, 'r') as file:
     file_content = file.read()
 
-data = {'issues': [ "fixed" [ "id" "SCOTT-1" + file_content, "SCOTT-2" + file_content]]}
+data = {'name': 'jira-collector',
+        'issues': [
+            {
+                "fixed":
+                    [
+                        {
+                            "id": "SCOTT-1" + file_content},
+                        {
+                            "id": "SCOTT-2" + file_content}
+                    ]
+            }
+        ]
+        }
 json_data = json.dumps(data)
 
 #subprocess.run(["ls", "-lFaR", "/etc/collectors-secrets"])
