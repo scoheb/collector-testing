@@ -6,8 +6,7 @@ file_path = '/etc/collectors-secrets/jira-token'
 with open(file_path, 'r') as file:
     file_content = file.read()
 
-data = {'name': 'jira-collector',
-        'issues': [
+data = {'issues': [
             {
                 "fixed":
                     [
